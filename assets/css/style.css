@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Vazir', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F4F7F6;
+    direction: rtl;
+    text-align: right;
+    color: #333;
+}
+
+/* Persian Blue Header */
+.navbar-persian {
+    background-color: #1C39BB !important;
+    color: #fff !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Persian Turquoise Buttons */
+.btn-persian {
+    background-color: #00A693;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-persian:hover {
+    background-color: #008476;
+    color: white;
+}
+
+/* Cards with Persian touches */
+.card-persian {
+    border: none;
+    border-top: 4px solid #00A693;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.sidebar-persian {
+    background-color: #1B1B1B;
+    min-height: 100vh;
+    color: #ADADAD;
+}
+
+.sidebar-persian .nav-link {
+    color: #ADADAD;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.sidebar-persian .nav-link.active {
+    background-color: #1C39BB;
+    color: white;
+}

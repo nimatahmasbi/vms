@@ -1,0 +1,21 @@
+{
+  "name": "VMS Smart Panel",
+  "short_name": "VMS",
+  "description": "Smart VPN Management System",
+  "start_url": "user/dashboard.php",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#0d6efd",
+  "icons": [
+    {
+      "src": "user/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "user/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

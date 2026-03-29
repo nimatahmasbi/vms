@@ -1,6 +1,6 @@
 <?php
 // Admin Overview Dashboard | پیش‌خوان مدیریت
-include 'includes/header.php';
+include '../includes/header.php';
 session_start();
 require_once '../config/db.php';
 if ($_SESSION['role'] !== 'admin') die("Access Denied");
@@ -82,5 +82,5 @@ $total_wallet = $db->query("SELECT SUM(wallet) FROM users")->fetchColumn();
         </div>
     </div>
 </body>
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
 </html>

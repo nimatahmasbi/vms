@@ -1,57 +1,111 @@
+/* فونت وزیر - حتما فایل فونت را در assets/fonts قرار دهید */
 @font-face {
     font-family: 'Vazir';
     src: url('../fonts/Vazir.woff2') format('woff2');
+    font-weight: normal; font-style: normal;
+}
+
+:root {
+    --p-blue: #1C39BB; /* لاجوردی آلمانی */
+    --p-turquoise: #00A693; /* فیروزه‌ای ایرانی */
+    --p-red: #C8102E; /* اناری */
+    --p-light: #F4F7F6;
 }
 
 body {
-    font-family: 'Vazir', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #F4F7F6;
+    font-family: 'Vazir', Tahoma, sans-serif;
+    background-color: var(--p-light);
     direction: rtl;
     text-align: right;
-    color: #333;
+    margin: 0;
+    overflow-x: hidden;
 }
 
-/* Persian Blue Header */
-.navbar-persian {
-    background-color: #1C39BB !important;
-    color: #fff !important;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+/* --- حل مشکل به‌هم‌ریختگی تصویر --- */
+.main-wrapper {
+    display: flex; /* ردیف کردن سایدبار و محتوا */
+    min-height: 100vh;
+    width: 100%;
 }
 
-/* Persian Turquoise Buttons */
+#sidebar {
+    width: 260px;
+    min-width: 260px;
+    background: #1B1B1B; /* رنگ تیره سایدبار */
+    color: #fff;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-content {
+    flex-grow: 1; /* اشغال باقی‌مانده فضا */
+    background-color: var(--p-light);
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* جلوگیری از سرریز شدن */
+}
+
+.top-nav {
+    height: 65px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.content-body {
+    padding: 30px;
+    flex-grow: 1;
+}
+
+/* --- Persian Components --- */
+.text-persian-blue { color: var(--p-blue) !important; }
+.text-persian-turquoise { color: var(--p-turquoise) !important; }
+
 .btn-persian {
-    background-color: #00A693;
+    background-color: var(--p-turquoise);
     color: white;
     border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
     transition: 0.3s;
 }
+.btn-persian:hover { background-color: #008476; color: white; }
 
-.btn-persian:hover {
-    background-color: #008476;
-    color: white;
+.btn-outline-persian {
+    border: 2px solid var(--p-blue);
+    color: var(--p-blue);
+    background: transparent;
+    border-radius: 8px;
+    padding: 10px 24px;
 }
+.btn-outline-persian:hover { background: var(--p-blue); color: white; }
 
-/* Cards with Persian touches */
 .card-persian {
     border: none;
-    border-top: 4px solid #00A693;
-    border-radius: 10px;
+    border-top: 5px solid var(--p-blue);
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.sidebar-persian {
-    background-color: #1B1B1B;
+/* --- Sidebar Nav --- */
+.sidebar-nav .nav-link {
+    color: #adb5bd;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 5px 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.sidebar-nav .nav-link i { margin-left: 10px; font-size: 1.1rem; }
+.sidebar-nav .nav-link:hover { background: rgba(255,255,255,0.05); color: white; }
+.sidebar-nav .nav-link.active { background: var(--p-blue); color: white; }
+
+/* --- Auth Pages (Login/Register) --- */
+.auth-bg {
+    background: linear-gradient(135deg, var(--p-blue) 0%, #0a1b75 100%);
     min-height: 100vh;
-    color: #ADADAD;
-}
-
-.sidebar-persian .nav-link {
-    color: #ADADAD;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-.sidebar-persian .nav-link.active {
-    background-color: #1C39BB;
-    color: white;
 }
